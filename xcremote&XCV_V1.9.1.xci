@@ -15,8 +15,7 @@ label=QuickMenu
 location=4
 
 
-##### Fügt Quickmenu(F1) Buttons 
-"Vario" und "Back" hinzu 
+##### Fügt Quickmenu(F1) Buttons "Vario" und "Back" hinzu 
 
 mode=RemoteStick
 type=key
@@ -46,7 +45,7 @@ location=31
 mode=Vario_menu
 type=key
 data=RIGHT
-event=SendNMEAPort1 g,v5
+event=SendNMEAPort2 g,v5
 event=StatusMessage VOLUME UP
 label=VOLUME UP (Right)
 location=4
@@ -54,7 +53,7 @@ location=4
 mode=Vario_menu
 type=key
 data=LEFT
-event=SendNMEAPort1 g,v-5
+event=SendNMEAPort2 g,v-5
 event=StatusMessage VOLUME DOWN
 label=VOLUME DWN (Left)
 location=3
@@ -62,7 +61,7 @@ location=3
 mode=Vario_menu
 type=key
 data=0
-event=SendNMEAPort1 g,s1
+event=SendNMEAPort2 g,s1
 event=StatusMessage SOLLFAHRT
 label=STF
 location=2
@@ -70,7 +69,7 @@ location=2
 mode=Vario_menu
 type=key
 data=0
-event=SendNMEAPort1 g,s0
+event=SendNMEAPort2 g,s0
 event=StatusMessage Vario
 label=Vario
 location=1
@@ -106,18 +105,28 @@ event=Mode default
 label=BACK (ESC)
 location=9
 
+
+#mode=Vario_menu
+#type=key
+#data=0
+#event=SendNMEAPort2 g,s1
+#event=StatusMessage SOLLFAHRT
+#label=STF
+#location=2
+
 mode=Vario_menu
 type=key
-data=P
+data=0
+event=SendNMEAPort2 g,rp
+#event=StatusMessage Setup 
 event=Mode variosetup
-event=SendNMEAPort1 g,rl
-label=XCVARIO SETUP (LONG PUSH)
+label=XCVARIO SETUP
 location=5
 
 mode=Vario menu
 type=key
 data=M
-event=SendNMEAPort1 g,klick
+event=SendNMEAPort2 g,rp
 event=StatusMessage XCVario Setup
 event=Mode variosetup
 
@@ -132,21 +141,21 @@ location=5
 mode=variosetup
 type=key
 data=0
-event=SendNMEAPort1 g,ru
+event=SendNMEAPort2 g,ru
 label=UP
 location=6
 
 mode=variosetup
 type=key
 data=0
-event=SendNMEAPort1 g,rd
+event=SendNMEAPort2 g,rd
 label=DOWN
 location=7
 
 mode=variosetup
 type=key
 data=0
-event=SendNMEAPort1 g,rp
+event=SendNMEAPort2 g,rp
 label=SELECT
 location=8
 
@@ -160,17 +169,17 @@ location=9
 mode=variosetup
 type=key
 data=UP
-event=SendNMEAPort1 g,ru
+event=SendNMEAPort2 g,ru
 
 mode=variosetup
 type=key
 data=DOWN
-event=SendNMEAPort1 g,rd
+event=SendNMEAPort2 g,rd
 
 mode=variosetup
 type=key
 data=RETURN
-event=SendNMEAPort1 g,rp
+event=SendNMEAPort2 g,rp
 
 
 #####PAN MODE#####
@@ -201,13 +210,13 @@ event=Zoom out
 mode=default
 type=key
 data=S
-event=SendNMEAPort1 g,s1
+event=SendNMEAPort2 g,s1
 event=StatusMessage SOLLFAHRT
 
 mode=default
 type=key
 data=V
-event=SendNMEAPort1 g,s0
+event=SendNMEAPort2 g,s0
 event=StatusMessage Vario
 
 
@@ -258,7 +267,7 @@ event=Setup Alternates
 ##changelog##
 #V1.2: Zoom function in PAN MODE added
 #V1.3: Added AutoZoom/Toggle
-       Added Next/Previous Waypoint Function
+#      Added Next/Previous Waypoint Function
 #V1.4: Added STF/Vario mode     
 #V1.5  Added QuickMenu Button
 #V1.6  Added XC Vario STF Switch
