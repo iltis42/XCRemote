@@ -1,16 +1,18 @@
-#####Speed to Fly
+#####Speed to Fly Toggling by right upper Button
 
 # works
 mode=default
 type=key
 data=M
 event=SendNMEAPort2 g,s1
-event=StatusMessage SOLLFAHRT
+event=StatusMessage Sollfahrt
+event=Mode defaultS
 
 # reacts to long press
-mode=default
+mode=defaultS
 type=key
-data=F1
+data=M
 event=SendNMEAPort2 g,s0
 event=StatusMessage Vario
+event=Mode default
 
