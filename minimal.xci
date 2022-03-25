@@ -3,16 +3,9 @@
 # works
 mode=default
 type=key
-data=F4
+data=M
 event=SendNMEAPort2 g,s1
 event=StatusMessage SOLLFAHRT
-
-# reacts to long press
-mode=default
-type=key
-data=F3
-event=SendNMEAPort2 g,s0
-event=StatusMessage Vario
 
 # reacts to long press
 mode=default
@@ -20,3 +13,4 @@ type=key
 data=F1
 event=SendNMEAPort2 g,s0
 event=StatusMessage Vario
+
