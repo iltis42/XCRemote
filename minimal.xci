@@ -17,6 +17,6 @@ event=StatusMessage Vario
 # reacts to long press
 mode=default
 type=key
-data=ESCAPE
+data=F1
 event=SendNMEAPort2 g,s0
 event=StatusMessage Vario
