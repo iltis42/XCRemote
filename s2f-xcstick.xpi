@@ -1,1 +1,15 @@
+#####Speed to Fly forwarding by 'S' and 'V' key from XCStick
 
+# reacts to key pressed 'S'
+mode=default
+type=key
+data=S
+event=SendNMEAPort2 g,s1
+event=StatusMessage Sollfahrt
+
+# reacts key press 'V'
+mode=default
+type=key
+data=V
+event=SendNMEAPort2 g,s0
+event=StatusMessage Vario
