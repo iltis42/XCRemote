@@ -3,13 +3,15 @@
 # reacts to key pressed 'S'
 mode=default
 type=key
-data=S
+#data=S
+data=F11
 event=SendNMEAPort2 g,s1
 event=StatusMessage Sollfahrt
 
 # reacts key press 'V'
 mode=default
 type=key
-data=V
+#data=V
+data=F12
 event=SendNMEAPort2 g,s0
 event=StatusMessage Vario
